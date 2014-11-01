@@ -1,0 +1,31 @@
+* { margin:0; padding:0;} 
+body{
+	
+}
+
+div#menu{
+	margin-left:auto;
+	margin-right:auto;
+	min-width:1080px;
+	max-width:1280px;
+	height:40px;
+	background-color:#6e1e1e;
+
+	div#menu_inr{
+		max-width:1160px;
+		margin-left:auto;
+		margin-right:auto;
+		margin:0 auto;
+	}
+	div#banner{
+		min-width:1080px;
+		max-width:1280px;
+		height:292px;
+		margin-left:auto;
+		margin-right:auto;
+		background-repeat:no-repeat;
+		background-position: top center;
+		background-size: 100% auto;
+		background-image:url('/assets/banner_1.jpg');
+	}
+}
