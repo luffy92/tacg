@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trinity ACG</title>
+  <title>Trinity Admin</title>
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'trinimin', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'trinimin', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="test">
-	asdsads
-</div>
-<%= yield %>
+<div id="admin-wrap">
+	<div id="admin-panel-top">
+	</div>
 
+	<div id="admin-panel-side">
+		<ul class="admin-panel-side-menu">
+			<li>Dashboard</li>
+			<li>Posts</li>
+		</ul>
+	</div>
+
+	<div id="admin-panel-body">
+		<div id="admin-panel-content">
+			<%= yield %>
+		</div>
+		<div id="admin-panel-footer">
+			this is footer
+		</div>
+	</div>
+<div>
 </body>
 </html>

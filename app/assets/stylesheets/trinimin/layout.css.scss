@@ -1,0 +1,85 @@
+/*admin panel design*/
+
+$panel-color: orange;
+$panel-content-color: white;
+$panel-top-height: 40px;
+$panel-side-width: 175px;
+
+#admin-panel-color{ background-color: $panel-color;}
+
+#admin-wrap{
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+#admin-panel-top{
+	@extend #admin-panel-color;
+	position: fixed;
+	width: 100%;
+	height: $panel-top-height;
+}
+
+#admin-panel-side{
+	@extend #admin-panel-color;
+	position: fixed;
+	width: $panel-side-width;
+	height: 100%;
+	float: left;
+	margin-top: $panel-top-height;
+}
+
+#admin-panel-body{
+	padding-top: $panel-top-height;
+	padding-left: $panel-side-width;
+}
+
+#admin-panel-content{
+	background-color: $panel-content-color;
+	padding: 25px;
+	height: 2580px;
+	position: relative;
+}
+
+#admin-panel-footer{
+	position: absolute; 
+	bottom: 0;
+	height: 35px;
+	width: 100px;
+}
+
+
+/*admin side panel menu*/
+
+$panel-side-menu-color: red;
+$panel-side-menu-color-hover: green;
+$panel-side-menu-font-color: white;
+$panel-side-menu-font-color-hover: blue;
+$panel-side-menu-padding: 10px;
+
+/*no change variable*/
+$panel-side-menu-width: $panel-side-width - 2*$panel-side-menu-padding;
+
+ul.admin-panel-side-menu{
+	list-style-type: none;
+	display: block;
+	z-index: 9990;
+
+	li{
+		display: list-item;
+		width: $panel-side-menu-width;
+		height: 20px;
+		padding: $panel-side-menu-padding;
+		background-color: $panel-side-menu-color;
+		text-align: -webkit-match-parent;
+		cursor: pointer;
+		color: $panel-side-menu-font-color;
+	}
+
+	li:hover{
+		background-color: $panel-side-menu-color-hover;
+		color: $panel-side-menu-font-color-hover;
+	}
+}
